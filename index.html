@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Fun Facts</title>
+    <meta charset="UTF-8">
+	<meta name="Rajesh" content="Get the fun facts related to numbers!!" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script>
+        $(document).ready(function(){
+        $("#FindBtn").click(function() {
+            var number = document.getElementById('number').value;
+            var url ='http://numbersapi.com/'+number+'/trivia?json'; 
+            $.get(url, function(data) {
+                if(!data['found']){
+                  $('#fact').text("No fun Facts about this Number yet!!");  
+                }
+                else
+                $('#fact').text(data['text']);
+            });
+         });
+        $("#number").keypress(function(e) {
+            if(e.which === 13){
+            var number = document.getElementById('number').value;
+            var url ='http://numbersapi.com/'+number+'/trivia?json'; 
+            $.get(url, function(data) {
+                if(!data['found']){
+                  $('#fact').text("No fun Facts about this Number yet!!");  
+                }
+                else
+                $('#fact').text(data['text']);
+            }); }
+         });    
+        });
+    </script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="appHeader">
+                <h1>Amazing Facts About Numbers!!</h1>
+            </div>
+            <div id="content" class="well well-sm">
+                <div id="inpContainer">
+                    <div id="inpBoxContainer">
+                        <input  id="number" placeholder="Enter any number" type="text">
+                    </div>
+                    <div id="BtnContainer">
+                        <input  id="FindBtn" type="button" value="Find">
+                    </div>
+                </div>
+                <div id="factContainer">
+                    <p id="fact"></p>
+                </div>
+            </div>       
+  
+            <div id="appFooter">
+              
+            </div>
+            
+        </div>
+        <div></div>
+    </body>
+</html>
