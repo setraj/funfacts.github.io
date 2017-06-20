@@ -1,0 +1,56 @@
+
+#appHeader{
+    position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:20px;     
+}
+h1{
+    
+    font-weight: normal;
+    line-height: 0.1em;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 1.7em !important;
+}
+#content{
+    background-color: #eee;
+    display: grid;
+    margin: 70px;
+	padding: 20px;
+    
+        
+}
+#appFooter{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: #CCC;
+    background: #333;
+    padding: 8px;
+    border-bottom: 1px #ccc solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inpContainer{
+    display: inline-flex;
+    margin-left: 30%;
+    margin-right: 50%;
+    
+}
+#factContainer{
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 30px;
+    height: 75px !important;
+    box-shadow: 0px 1px 2px #998080;
+}
+#inpBox{
+ margin-right: 5px;
+}
