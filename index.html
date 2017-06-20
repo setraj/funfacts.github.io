@@ -12,7 +12,7 @@
         $(document).ready(function(){
         $("#FindBtn").click(function() {
             var number = document.getElementById('number').value;
-            var url ='http://numbersapi.com/'+number+'/trivia?json'; 
+            var url ='https://numbersapi.com/'+number+'/trivia?json'; 
             $.get(url, function(data) {
                 if(!data['found']){
                   $('#fact').text("No fun Facts about this Number yet!!");  
